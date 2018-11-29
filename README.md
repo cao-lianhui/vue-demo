@@ -39,7 +39,7 @@ routes: [
 
 	  {path:'/home', component:homeContainer},
 	  
-          {path:'/member', component:memberContainer},
+	  {path:'/member', component:memberContainer},
       
 	  {path:'/shopcar', component:shopCarContainer},
 	  
