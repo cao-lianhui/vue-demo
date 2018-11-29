@@ -36,9 +36,10 @@ linkActiveClass:'mui-active'//覆盖默认路由高亮的类，在app.vue组件�
 ##点击tabbar中的路由链接，展示对应的路由组件
 
 routes: [
+
 	  {path:'/home', component:homeContainer},
 	  
-      {path:'/member', component:memberContainer},
+          {path:'/member', component:memberContainer},
       
 	  {path:'/shopcar', component:shopCarContainer},
 	  
