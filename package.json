@@ -37,7 +37,8 @@
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
-    "mint-ui": "^2.2.13"
+    "mint-ui": "^2.2.13",
+    "vue-resource": "^1.5.1"
   },
   "description": ""
 }
