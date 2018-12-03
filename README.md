@@ -14,11 +14,17 @@
 
 ##制作首页App组件
 1.完成Header区域，使用的是Mint-UI中的Header组件
+
 2.制作底部的Tabbar区域，使用的是MUI的Tabbar.html
-  +在制作购物车小图标时操作会相对多些，
+
+  +在制作购物车小图标时操作会相对多些
+  
   +先把扩展图标的css样式，拷贝到项目中
+  
   +拷贝扩展字体库ttf文件，到项目中
+  
   +为购物车小图标，添加如下样式"mui-icon mui-icon-extra mui-icon-extra-cart"
+  
 3.要在中间区域放置一个router-view来展示路由匹配到的组件
 
 ##改造tabbar的a标签为router-link
@@ -30,9 +36,13 @@ linkActiveClass:'mui-active'//覆盖默认路由高亮的类，在app.vue组件�
 ##点击tabbar中的路由链接，展示对应的路由组件
 
 routes: [
+
 	  {path:'/home', component:homeContainer},
-      {path:'/member', component:memberContainer},
+	  
+	  {path:'/member', component:memberContainer},
+      
 	  {path:'/shopcar', component:shopCarContainer},
+	  
 	  {path:'/search', component:searchContainer}
 	],
 
@@ -43,10 +53,12 @@ routes: [
 import { Swipe, SwipeItem } from 'mint-ui';
 
 Vue.component(Swipe.name, Swipe);
+
 Vue.component(SwipeItem.name, SwipeItem);
 
 ##加载首页轮播数据
 
+<<<<<<< HEAD
   1.获取数据，使用vue-resource
 
   2.使用vue-resource的this.$http.get获取数据
@@ -98,3 +110,12 @@ Vue.component(SwipeItem.name, SwipeItem);
   3.为了防止新数据覆盖老数据的情况，在点击『加载更多』的时候，每当获取新数据，应该让老数据
   
   调用数组的concat方法，拼接上新数组
+=======
+1.获取数据，使用vue-resource
+
+2.使用vue-resource的this.$http.get获取数据
+
+3.获取到的数据要保存到homeContainer组件的data身上
+
+4.使用v-for循环渲染每个item项
+>>>>>>> 99be8527ab532303e8aa5a9209dbfbd3eba39ec1
