@@ -56,9 +56,8 @@ Vue.component(Swipe.name, Swipe);
 
 Vue.component(SwipeItem.name, SwipeItem);
 
-##加载首页轮播数据
+##加载首页轮播数据HEAD
 
-<<<<<<< HEAD
   1.获取数据，使用vue-resource
 
   2.使用vue-resource的this.$http.get获取数据
@@ -109,8 +108,8 @@ Vue.component(SwipeItem.name, SwipeItem);
   
   3.为了防止新数据覆盖老数据的情况，在点击『加载更多』的时候，每当获取新数据，应该让老数据
   
-  调用数组的concat方法，拼接上新数组
-=======
+## 调用数组的concat方法，拼接上新数组
+
 1.获取数据，使用vue-resource
 
 2.使用vue-resource的this.$http.get获取数据
@@ -118,4 +117,3 @@ Vue.component(SwipeItem.name, SwipeItem);
 3.获取到的数据要保存到homeContainer组件的data身上
 
 4.使用v-for循环渲染每个item项
->>>>>>> 99be8527ab532303e8aa5a9209dbfbd3eba39ec1
