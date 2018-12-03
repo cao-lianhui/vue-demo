@@ -16,12 +16,18 @@
 		   </mt-swipe-item>
         </mt-swipe>
 	    <ul class="mui-table-view mui-grid-view mui-grid-9">
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+					    <router-link to="/home/newslist">
 		                    <img src="../../image/banner1.jpg" alt="">
-		                    <div class="mui-media-body">新闻资讯</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <div class="mui-media-body">新闻资讯</div>
+					    </router-link>
+					</li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+					    <a href="#">
 		                    <img src="../../image/banner2.jpg" alt=""></span>
-		                    <div class="mui-media-body">图片分享</div></a></li>
+		                    <div class="mui-media-body">图片分享</div>
+						</a>
+					</li>
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
 		                    <img src="../../image/banner3.jpg" alt="">
 		                    <div class="mui-media-body">商品购买</div></a></li>
@@ -52,7 +58,7 @@ import {Toast} from 'mint-ui'
 		},
 		methods:{
 		   getBanner(){
-		      this.$http.get('http://vue.studyit.io/api/getlunbo').then(result => {
+		      this.$http.get('api/getlunbo').then(result => {
 			      console.log(result.body);
 				  if(result.body.status === 0){
 				      //成功了

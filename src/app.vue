@@ -39,6 +39,7 @@
 <style lang="less" scoped>
 .vue-container{
     padding-top:40px;
+	padding-bottom:50px;
 	overflow-x:hidden;
 }
 

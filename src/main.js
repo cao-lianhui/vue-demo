@@ -6,10 +6,20 @@ import VueRouter from 'vue-router'
 //安装路由
 Vue.use(VueRouter)
 
+//导入格式化时间插件
+import moment from 'moment'
+//定义全局的过滤器
+Vue.filter('dateFormat', function(dataStr, pattern="YYYY-MM-DD HH:mm:ss"){
+	moment(dataStr).format(pattern);
+})
+
 //导入vue-resource
 import VueResource from 'vue-resource'
 //安装vue-resource
 Vue.use(VueResource)
+
+//全局配置请求路径
+Vue.http.options.root = 'http://vue.studyit.io';
 
 
 //导入mui的样式
@@ -18,11 +28,12 @@ import './lib/mui/css/mui.min.css'
 import './lib/mui/css/icons-extra.css'
 
 //按需导入mint-ui的组件
-import {Header, Swipe, SwipeItem} from 'mint-ui'
+import {Header, Swipe, SwipeItem, Button} from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.component(Header.name, Header)
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
+Vue.component(Button.name, Button)
 
 //导图router.js模块
 import router from './router.js'
