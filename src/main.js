@@ -20,6 +20,8 @@ Vue.use(VueResource)
 
 //全局配置请求路径
 Vue.http.options.root = 'http://vue.studyit.io';
+//设置全局post时候表单数据格式的组织形式
+Vue.http.options.emulateJSON = true;
 
 
 //导入mui的样式

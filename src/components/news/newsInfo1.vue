@@ -21,7 +21,7 @@
 		</div>
 		
 		<!--评论区域-->
-		<comment-box></comment-box>
+		<comment-box :id="this.id"></comment-box>
 	</div>
 </template>
 

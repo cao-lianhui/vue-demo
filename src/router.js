@@ -9,6 +9,7 @@ import newsList from './components/news/newsList.vue'
 import newsInfo1 from './components/news/newsInfo1.vue'
 import newsInfo2 from './components/news/newsInfo2.vue'
 import newsInfo3 from './components/news/newsInfo3.vue'
+import photoShare from './components/photos/photoShare.vue'
 
 var router = new VueRouter({
 	routes: [
@@ -18,9 +19,10 @@ var router = new VueRouter({
 	  {path:'/shopcar', component:shopCarContainer},
 	  {path:'/search', component:searchContainer},
 	  {path:'/home/newslist', component:newsList},
-	  {path:'/home/newsinfo1',component:newsInfo1},
-	  {path:'/home/newsinfo2',component:newsInfo2},
-	  {path:'/home/newsinfo3',component:newsInfo3}
+	  {path:'/home/newsinfo1', component:newsInfo1},
+	  {path:'/home/newsinfo2', component:newsInfo2},
+	  {path:'/home/newsinfo3', component:newsInfo3},
+	  {path:'/home/photoshare', component:photoShare}
 	],
 	linkActiveClass:'mui-active'//覆盖默认路由高亮的类，
 })

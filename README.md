@@ -56,9 +56,8 @@ Vue.component(Swipe.name, Swipe);
 
 Vue.component(SwipeItem.name, SwipeItem);
 
-##加载首页轮播数据
+##加载首页轮播数据HEAD
 
-<<<<<<< HEAD
   1.获取数据，使用vue-resource
 
   2.使用vue-resource的this.$http.get获取数据
@@ -110,12 +109,77 @@ Vue.component(SwipeItem.name, SwipeItem);
   3.为了防止新数据覆盖老数据的情况，在点击『加载更多』的时候，每当获取新数据，应该让老数据
   
   调用数组的concat方法，拼接上新数组
-=======
-1.获取数据，使用vue-resource
 
-2.使用vue-resource的this.$http.get获取数据
+##发表评论
 
-3.获取到的数据要保存到homeContainer组件的data身上
+  1.把文本框做双向数据绑定
+  
+  2.为发表按钮绑定一个事件
+  
+  3.校验评论内容是否为空，如果为空，则Toast提示用户评论内容不能为空
+  
+  4.通过Vue-resource发送一个请求，把评论内容提交给服务器
+  
+  5.当发表评论ok后重新刷新列表，以查看最新的评论
+  
+     如果调用getComments方法重新刷新评论列表，可能只能得到最后一页的评论，前几页的评论获取不到
+	 
+	 换一种思路：当评论成功后，在客户端，手动拼接出一个最新的评论对象，然后调用数组的unshift方法
+	 
+	 ，把最新的评论，追加到data中comments开头，这样就能实现刷新评论列表的需求
+	 
+##改造『图片分享』按钮为路由链接并显示对应的组件页面
 
-4.使用v-for循环渲染每个item项
->>>>>>> 99be8527ab532303e8aa5a9209dbfbd3eba39ec1
+##绘制图片列表组件页面结构并美化样式
+
+  1.制作顶部的滑动条
+  
+  2.制作底部的图片列表
+  
+##制作顶部滑动条的坑
+
+  1.需要借助于MUI中的tab-top-webview-main.html
+  
+  2.需要把id类名为slider的div中的类名mui-fullscreen去掉
+  
+  3.滑动条无法正常的触发滑动，通过检查官方文档，发现这是js组件，需要被初始化以下
+    
+	1）导入mui.js
+	
+	2）调用官方提供的方式去初始化
+	
+	```
+	mui('.mui-scroll-warpper').scroll({
+	    deceleration:0.0005//flick减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+	});
+	```
+	
+  4.在初始化滑动条的时候，导入了mui.js，但控制台报错:mui.min.js:946 Uncaught TypeError: 
+  
+  'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions 
+  
+  or the arguments objects for calls to them
+  
+  可能是mui.js中用到了'caller', 'callee', and 'arguments'东西,但是webpack打包好的bundle.js中，
+  
+  默认是启用严格模式的，所以，这两者冲突了
+  
+  解决方案：1.把mui.js中的非严格模式的代码改掉，但不现实; 
+           
+		    2.把webpack打包时候的严格模式禁用掉;
+			
+			禁用方式:安装babel-plugin-transform-remove-strict-mode插件
+			
+			         npm i babel-plugin-transform-remove-strict-mode -S
+					 
+					 在.babelrc文件中的plugins属性里添加transform-remove-strict-mode
+					 
+					 plugins:["transform-remove-strict-mode"]
+					 
+  5.刚进入『图片分享』页面的时候，滑动条无法正常工作，发现，如果要初始化滑动条，必须要等DOM元素加载完毕
+  
+  ，所以，要把初始化滑动条代码放到mounted生命周期函数中
+  
+  6.当滑动条调试ok后，发现，tabbar无法正常切换了，这时候需要进入app.vue把tabbar的每个切换按钮的
+  
+  样式："mui-tab-item"重新更改下名字
