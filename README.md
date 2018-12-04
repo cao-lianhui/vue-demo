@@ -108,7 +108,13 @@ Vue.component(SwipeItem.name, SwipeItem);
   
   3.为了防止新数据覆盖老数据的情况，在点击『加载更多』的时候，每当获取新数据，应该让老数据
   
+<<<<<<< HEAD
   调用数组的concat方法，拼接上新数组
+=======
+## 调用数组的concat方法，拼接上新数组
+
+1.获取数据，使用vue-resource
+>>>>>>> e62826465b4d36d70dc8456c3852b4957edb5e91
 
 ##发表评论
 
@@ -130,6 +136,7 @@ Vue.component(SwipeItem.name, SwipeItem);
 	 
 ##改造『图片分享』按钮为路由链接并显示对应的组件页面
 
+<<<<<<< HEAD
 ##绘制图片列表组件页面结构并美化样式
 
   1.制作顶部的滑动条
@@ -183,3 +190,6 @@ Vue.component(SwipeItem.name, SwipeItem);
   6.当滑动条调试ok后，发现，tabbar无法正常切换了，这时候需要进入app.vue把tabbar的每个切换按钮的
   
   样式："mui-tab-item"重新更改下名字
+=======
+4.使用v-for循环渲染每个item项
+>>>>>>> e62826465b4d36d70dc8456c3852b4957edb5e91
