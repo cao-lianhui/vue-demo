@@ -150,11 +150,9 @@ Vue.component(SwipeItem.name, SwipeItem);
 	
 	2）调用官方提供的方式去初始化
 	
-	```
 	mui('.mui-scroll-warpper').scroll({
 	    deceleration:0.0005//flick减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
 	});
-	```
 	
   4.在初始化滑动条的时候，导入了mui.js，但控制台报错:mui.min.js:946 Uncaught TypeError: 
   
@@ -167,10 +165,10 @@ Vue.component(SwipeItem.name, SwipeItem);
   默认是启用严格模式的，所以，这两者冲突了
   
   解决方案：
-  
+ 
                     1.把mui.js中的非严格模式的代码改掉，但不现实; 
            
-		    2.把webpack打包时候的严格模式禁用掉;
+	            2.把webpack打包时候的严格模式禁用掉;
 			
 		    禁用方式:安装babel-plugin-transform-remove-strict-mode插件
 			
