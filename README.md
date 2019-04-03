@@ -166,7 +166,9 @@ Vue.component(SwipeItem.name, SwipeItem);
   
   默认是启用严格模式的，所以，这两者冲突了
   
-  解决方案：1.把mui.js中的非严格模式的代码改掉，但不现实; 
+  解决方案：
+  
+                    1.把mui.js中的非严格模式的代码改掉，但不现实; 
            
 		    2.把webpack打包时候的严格模式禁用掉;
 			
