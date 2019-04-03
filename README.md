@@ -166,17 +166,17 @@ Vue.component(SwipeItem.name, SwipeItem);
   
   解决方案：
  
-1.把mui.js中的非严格模式的代码改掉，但不现实;
+         1.把mui.js中的非严格模式的代码改掉，但不现实;
 		    
-2.把webpack打包时候的严格模式禁用掉;
+         2.把webpack打包时候的严格模式禁用掉;
 			
-		    禁用方式:安装babel-plugin-transform-remove-strict-mode插件
+         禁用方式:安装babel-plugin-transform-remove-strict-mode插件
 			
-	            npm i babel-plugin-transform-remove-strict-mode -S
+         npm i babel-plugin-transform-remove-strict-mode -S
 					 
-		    在.babelrc文件中的plugins属性里添加transform-remove-strict-mode
+         在.babelrc文件中的plugins属性里添加transform-remove-strict-mode
 					 
-	            plugins:["transform-remove-strict-mode"]
+plugins:["transform-remove-strict-mode"]
 					 
   5.刚进入『图片分享』页面的时候，滑动条无法正常工作，发现，如果要初始化滑动条，必须要等DOM元素加载完毕
   
