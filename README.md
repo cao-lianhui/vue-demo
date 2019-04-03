@@ -176,7 +176,7 @@ Vue.component(SwipeItem.name, SwipeItem);
 					 
          在.babelrc文件中的plugins属性里添加transform-remove-strict-mode
 					 
-plugins:["transform-remove-strict-mode"]
+         plugins:["transform-remove-strict-mode"]
 					 
   5.刚进入『图片分享』页面的时候，滑动条无法正常工作，发现，如果要初始化滑动条，必须要等DOM元素加载完毕
   
