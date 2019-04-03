@@ -107,14 +107,10 @@ Vue.component(SwipeItem.name, SwipeItem);
   2.点击『加载更多』，让pageIndex++，然后重新调用this.getComments()方法重新获取最新一页的数据
   
   3.为了防止新数据覆盖老数据的情况，在点击『加载更多』的时候，每当获取新数据，应该让老数据
-  
-<<<<<<< HEAD
-  调用数组的concat方法，拼接上新数组
-=======
+
 ## 调用数组的concat方法，拼接上新数组
 
 1.获取数据，使用vue-resource
->>>>>>> e62826465b4d36d70dc8456c3852b4957edb5e91
 
 ##发表评论
 
@@ -136,7 +132,6 @@ Vue.component(SwipeItem.name, SwipeItem);
 	 
 ##改造『图片分享』按钮为路由链接并显示对应的组件页面
 
-<<<<<<< HEAD
 ##绘制图片列表组件页面结构并美化样式
 
   1.制作顶部的滑动条
@@ -175,13 +170,13 @@ Vue.component(SwipeItem.name, SwipeItem);
            
 		    2.把webpack打包时候的严格模式禁用掉;
 			
-			禁用方式:安装babel-plugin-transform-remove-strict-mode插件
+		    禁用方式:安装babel-plugin-transform-remove-strict-mode插件
 			
-			         npm i babel-plugin-transform-remove-strict-mode -S
+	            npm i babel-plugin-transform-remove-strict-mode -S
 					 
-					 在.babelrc文件中的plugins属性里添加transform-remove-strict-mode
+		    在.babelrc文件中的plugins属性里添加transform-remove-strict-mode
 					 
-					 plugins:["transform-remove-strict-mode"]
+	            plugins:["transform-remove-strict-mode"]
 					 
   5.刚进入『图片分享』页面的时候，滑动条无法正常工作，发现，如果要初始化滑动条，必须要等DOM元素加载完毕
   
@@ -190,6 +185,3 @@ Vue.component(SwipeItem.name, SwipeItem);
   6.当滑动条调试ok后，发现，tabbar无法正常切换了，这时候需要进入app.vue把tabbar的每个切换按钮的
   
   样式："mui-tab-item"重新更改下名字
-=======
-4.使用v-for循环渲染每个item项
->>>>>>> e62826465b4d36d70dc8456c3852b4957edb5e91
