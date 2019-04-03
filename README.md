@@ -34,7 +34,7 @@
 linkActiveClass:'mui-active'//覆盖默认路由高亮的类，在app.vue组件里设置该类
 
 ##点击tabbar中的路由链接，展示对应的路由组件
-
+```
 routes: [
 
 	  {path:'/home', component:homeContainer},
@@ -45,6 +45,7 @@ routes: [
 	  
 	  {path:'/search', component:searchContainer}
 	],
+```
 
 ##制作轮播图首页
 
