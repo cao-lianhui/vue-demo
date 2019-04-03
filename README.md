@@ -166,9 +166,9 @@ Vue.component(SwipeItem.name, SwipeItem);
   
   解决方案：
  
-                    1.把mui.js中的非严格模式的代码改掉，但不现实;
+1.把mui.js中的非严格模式的代码改掉，但不现实;
 		    
-	            2.把webpack打包时候的严格模式禁用掉;
+2.把webpack打包时候的严格模式禁用掉;
 			
 		    禁用方式:安装babel-plugin-transform-remove-strict-mode插件
 			
